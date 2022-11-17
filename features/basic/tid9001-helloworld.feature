@@ -1,4 +1,4 @@
-@regression
+@release
 @tid:9001
 Feature: Say Hello, World
     In order to test web interfaces

@@ -1,4 +1,4 @@
-@regression
+@release
 @tid:9003
 Feature: Use a local step definition
     In order to extend the existing step library with additional steps

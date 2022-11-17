@@ -1,5 +1,5 @@
 @tid:9002
-@regression
+@release
 @search
 Feature: Search for data
     Search for data

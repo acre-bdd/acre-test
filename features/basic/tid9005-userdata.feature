@@ -1,4 +1,4 @@
-@regression
+@release
 @tid:9005
 @profile
 Feature: User is able to read private user data in the steps

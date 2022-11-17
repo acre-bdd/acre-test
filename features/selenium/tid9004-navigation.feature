@@ -1,5 +1,5 @@
 @tid:9004
-@regression
+@release
 Feature: Navigate in the browser
     In order to test web applications
     I need to be able to navigate around in the browser.
