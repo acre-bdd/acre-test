@@ -1,10 +1,10 @@
-name: Makefile CI
+name: CI
 
 on:
   push:
-    branches: [ master, branches/query ]
+    branches: [ master ]
   pull_request:
-    branches: [ master, branches/query ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -12,14 +12,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         path: acre-test
     
-    - name: install and initialise acre
+    - name: install and initialize acre, build containers
       run: |
         python3 -m pip install git+https://github.com/acre-bdd/acre-cli.git
         acre init
+        acre build
 
     - name: run acre-tests
       run: |
