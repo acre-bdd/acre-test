@@ -1,6 +1,6 @@
 # self tests for acre
 
-See https://github.com/realtimeprojects/acre-docker
+See https://github.com/acre-bdd/acre-docker
 
 # quickstart
 
