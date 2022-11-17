@@ -8,10 +8,10 @@ from acre.controls import Input, Link
 
 @when("I search for '{text}'")
 def i_see_the_title(step, text):
-    searchbox = Input(cssclass="js-search-input")
+    searchbox = Input(id="search_form_input_homepage")
     searchbox.input(text)
 
-    button = Input(cssclass='js-search-button')
+    button = Input(id='search_button_homepage')
     button.click()
 
 
