@@ -7,7 +7,7 @@ Feature: Search for data
     Scenario: search for huhu
         Given I start the browser
         When I navigate to 'http://www.duckduckgo.com'
-        Then I see 'DuckDuckGo' in the page title
+        Then I see 'xDuckDuckGo' in the page title
 
         When I search for 'python.org'
         Then I follow the link 'Welcome to Python.org'
