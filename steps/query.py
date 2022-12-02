@@ -1,4 +1,3 @@
-import time
 import re
 
 from radish import then, when
@@ -6,7 +5,7 @@ from radish import then, when
 from acre.controls import Input, Link
 
 
-@when("I search for '{text}'")
+@when('I search for {text:QuotedString}')
 def i_see_the_title(step, text):
     searchbox = Input(id="search_form_input_homepage")
     searchbox.input(text)
@@ -15,11 +14,8 @@ def i_see_the_title(step, text):
     button.click()
 
 
-@then(re.compile(r"I (see|follow) the link '(.*)'"))
-def i_see_the_link(step, command, text):
+@then(re.compile(r"I follow the link '(.*)'"))
+def i_follow_the_link(step, text):
     link = Link(text=text)
     link.locate()
-    if command == 'follow':
-        link.click()
-
-    time.sleep(5)
+    link.click()

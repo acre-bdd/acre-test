@@ -4,13 +4,20 @@
 Feature: Search for data
     Search for data
 
-    Scenario: search for huhu
+    @fails
+    Scenario: failed title lookup
         Given I start the browser
-        When I navigate to 'http://www.duckduckgo.com'
-        Then I see 'xDuckDuckGo' in the page title
+        When I navigate to "http://www.duckduckgo.com"
+        Then I see the title "xDuckDuckGo"
 
-        When I search for 'python.org'
+    Scenario: search on duckduckgo
+        Given I start the browser
+        When I navigate to "http://www.duckduckgo.com"
+        Then I see the title "DuckDuckGo"
+
+        When I search for "python.org"
         Then I follow the link 'Welcome to Python.org'
-        Then I see 'Welcome to Python.org' in the page title
+        Then I see the title "Welcome to Python.org"
 
         Then I close the browser
+
