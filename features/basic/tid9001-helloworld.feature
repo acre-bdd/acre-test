@@ -7,5 +7,5 @@ Feature: Say Hello, World
 
     Scenario: Say Hello, World
         Given nothing
-        When I say 'Hello, World'
+        When I say "Hello, World"
         Then I expect nothing
