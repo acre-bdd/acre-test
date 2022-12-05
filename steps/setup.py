@@ -1,1 +1,1 @@
-# from acre.steps.selenium import basic   # noqa: F401
+from acre.steps import all  # noqa: F401
